@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     postPost() {
-      axios.post('http://jsonplaceholder.typicode.com/posts', {
+      axios.post(`posts`, {
         body: this.postBody
       })
       .then(response => {

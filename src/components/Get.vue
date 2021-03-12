@@ -16,7 +16,8 @@
 </template>
 
 <script>
-import axios from 'axios';
+//import axios from 'axios';
+import { HTTP } from '../http-common';
 
 export default {
   data() {
@@ -27,7 +28,7 @@ export default {
   },
   // Fetches posts when the component is created.
   created() {
-    axios.get('http://jsonplaceholder.typicode.com/posts')
+    HTTP.get(`posts`)
     .then(response => {
       // JSON responses are automatically parsed.
       this.posts = response.data
